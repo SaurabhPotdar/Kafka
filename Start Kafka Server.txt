@@ -1,0 +1,26 @@
+1) https://www.goavega.com/install-apache-kafka-on-windows/
+https://stackoverflow.com/a/58371707/12021132  //Windows Commands
+Open cmd in kafka folder
+bin\windows\kafka-server-start.bat config\server.properties
+https://stackoverflow.com/questions/50755827/accessdeniedexception-when-deleting-a-topic-on-windows-kafka?rq=1
+https://stackoverflow.com/questions/69289641/accessdeniedexception-while-running-apache-kafka-3-on-windows
+https://stackoverflow.com/questions/45599625/kafka-unable-to-start-kafka-process-can-not-access-file-00000000000000000000
+
+2) Kafka on WSL 2
+Install Apache Kafka on Windows WSL - https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-linux-wsl-2/
+Install Confluent Kafka on Windows - https://www.confluent.io/blog/set-up-and-run-kafka-on-windows-and-wsl-2/
+Install Confluent Kafka using Docker - https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html#
+
+cd to kafka folder (localhost can be replaced by 127.0.0.1)
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
+bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic quickstart-events --bootstrap-server localhost:9092
+rm -rf /tmp/kafka-logs /tmp/zookeeper
+bin/kafka-topics.sh --list --zookeeper localhost:9092
+bin/kafka-topics.sh --zookeeper localhost:9092 --topic quickstart-events --describe
+
+
+https://phoenixnap.com/kb/linux-set-environment-variable
+

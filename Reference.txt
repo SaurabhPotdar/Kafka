@@ -1,0 +1,6 @@
+Producer Consumner with Spring Kakfa
+1)https://www.baeldung.com/spring-kafka
+2)https://developer.confluent.io/learn-kafka/spring/confluent-cloud/
+3)https://reflectoring.io/spring-boot-kafka/
+4)https://medium.com/swlh/apache-kafka-producer-consumer-using-spring-boot-d8e201a9290c
+5)with Docker - https://github.com/techtter/springboot-kafka-docker
