@@ -1,0 +1,14 @@
+{
+    "type": "record",
+    "name": "MessageKafka",
+    "namespace": "com.tce.kafka.schema",
+    "fields": [
+    {
+        "name": "id",
+        "type": "int"
+    },
+    {
+        "name": "body",
+        "type": "string"
+    }]
+}
